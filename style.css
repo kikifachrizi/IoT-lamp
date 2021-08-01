@@ -1,0 +1,23 @@
+@media(min-width: 320px){
+    .tombol {
+        text-align: center;
+    }
+    .tombol .on {
+        margin: 10px 0px 10px 0px;
+    }
+    .on a {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        padding-top: 35px;
+    }
+    .tombol .off {
+        margin: 10px 0px 10px 0px;
+    }
+    .off a {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        padding-top: 35px;
+    }
+}
