@@ -2,7 +2,7 @@
 #include <ESP8266HTTPClient.h>
 #include <ArduinoJson.h>
 #include <WiFiClient.h>
-//#define ledd D4
+
 
 int ledd = 16;//D4
 int led = 2;
@@ -14,8 +14,8 @@ WiFiClient wifiClient;
 void setup() {
   pinMode(led, OUTPUT);
   pinMode(ledd, OUTPUT);
-  const char* ssid = "ARKAN 3"; //Nama WiFi
-  const char* password = "faizarka123"; //Password WiFi
+  const char* ssid = "ISINAMAWIFIKALIAN"; //Nama WiFi
+  const char* password = "ISIPASSSWIFIKALIAN"; //Password WiFi
 //    const char* ssid = "Redmi Note 10"; //Nama WiFi
 //  const char* password = "12345678"; //Password WiFi
   Serial.begin(115200);
@@ -31,8 +31,7 @@ void loop() {
 
   if (WiFi.status() == WL_CONNECTED) {
     HTTPClient http;
-//    http.begin(wifiClient, "http://192.168.18.8/IoTlampu/get.php");
-http.begin(wifiClient, "http://213.190.4.239/iotlampu/get.php");
+http.begin(wifiClient, "ISI URL YANG AKAN KALIAN AKSES (YANG SUDAH DITEST PADA POSTMAN)");
     http.addHeader("Content-Type", "application/x-www-form-urlencoded");
     int httpResponseCode = http.POST("token="+key); 
     delay(100);
